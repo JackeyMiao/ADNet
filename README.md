@@ -31,17 +31,6 @@ For training the MultiPM instances with 20 nodes with $p_k = [2, 3, 4]$ and usin
 python run.py --graph_size 20 --pk 2 3 4 --r 0.32 --run_name 'MultiPM20'
 ```
 
-### Evalution
-To evaluate the Multi instances with 20 nodes by greedy strategy:
-```bash
-python eval.py {dataset_path} --decode_strategy greedy --model {model_path}
-```
-
-To evaluate the Multi instances with 20 nodes by sample1280 strategy:
-```bash
-python eval.py {dataset_path} --decode_strategy sample --width 1280 --model {model_path}
-```
-
 #### Multiple GPUs
 By default, training will happen *on all available GPUs*. To disable CUDA at all, add the flag `--no_cuda`. 
 Set the environment variable `CUDA_VISIBLE_DEVICES` to only use specific GPUs:
@@ -55,6 +44,18 @@ You can initialize a run using a pretrained model by using the `--load_path` opt
 ```bash
 python run.py --graph_size 100 --load_path {pre-trained path}
 ```
+
+### Evalution
+To evaluate the Multi instances with 20 nodes by greedy strategy:
+```bash
+python eval.py {dataset_path} --decode_strategy greedy --model {model_path}
+```
+
+To evaluate the Multi instances with 20 nodes by sample1280 strategy:
+```bash
+python eval.py {dataset_path} --decode_strategy sample --width 1280 --model {model_path}
+```
+
 
 ## Solution Visualization
 <img width="1596" alt="image" src="https://github.com/user-attachments/assets/f99a5efd-7a3b-4124-9b2c-48282a6e6568">
