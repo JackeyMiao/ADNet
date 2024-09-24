@@ -1,5 +1,6 @@
 # Deep Reinforcement Learning for Multi-Period Facility Location: $p_k$-median Dynamic Location Problem
-This is the official code for the published paper 'Deep Reinforcement Learning for Multi-Period Facility Location: 𝑝𝑘-median Dynamic Location Problem'.
+This is the official code for the published paper 'Deep Reinforcement Learning for Multi-Period Facility Location: $p_k$-median Dynamic Location Problem'.
+<img width="1144" alt="image" src="https://github.com/user-attachments/assets/ddfc30c3-358c-4dcc-ab17-41d6e3a6942d">
 
 ## Dependencies
 All experiments are conducted on the machine with two GTX 3090 GPU and Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz, and the code is implemented in Python.
@@ -55,6 +56,15 @@ You can initialize a run using a pretrained model by using the `--load_path` opt
 python run.py --graph_size 100 --load_path {pre-trained path}
 ```
 
+## Solution Visualization
+<img width="1596" alt="image" src="https://github.com/user-attachments/assets/f99a5efd-7a3b-4124-9b2c-48282a6e6568">
+
+
+## Acknowledgements
+This repository includes adaptions of the following repositories as baselines:
+* https://github.com/wouterkool/attention-learn-to-route/
+* https://github.com/kevin031060/CSP_Attention
+* https://github.com/CO-RL/SpoNet
 
 
 
