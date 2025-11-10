@@ -151,7 +151,7 @@ class AttentionModel(nn.Module):
         ll = _log_p.sum(-1)
 
         for i in range(ll.size(0)):
-            ll[i] = ll[i] / torch.nonzero(_log_p[i]).size(0) * 50
+            ll[i] = ll[i] / (torch.nonzero(_log_p[i]).size(0) + 1e-8) * 50
 
         if return_pi:
             return cost, ll, pi
